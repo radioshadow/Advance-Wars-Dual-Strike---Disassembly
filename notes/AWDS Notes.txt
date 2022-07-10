@@ -1,0 +1,111 @@
+E2410 (arm9.bin) = 0000A0E1 | No offense boost during powers.
+
+E6978 (arm9.bin) = 005085E0 | Lash does +10% per star.
+
+DFE84 (arm9.bin) =          | Which CO gets no fuel penalty.
+
+
+101CDC = Pointer to Locked Maps, COs (Not Combat), & Colors (0216BC60)
+
+Change offset to "E0D51602" to unlock all Maps, COs, & Colors!
+
+
+020E0254 = Vision Reduction in Rain
+
+020D2D40 = Set Weather Value
+
+--------------------------------------------------------------------------------
+
+Unit Dossier 
+
+15D2E0 = Unit Order
+
+/ohashi/res_syoguninfo_lang_E = Unit Info Graphic
+
+0206D708 = Y Position for Move/Range
+
+0206D890 = Is Unit Transport? Don't load bar.
+
+
+0206D8A8 = Setup Offense Bar for each unit.
+
+02026CE8
+0206DE20
+
+Unit Data (RAM)
+
+022F5040 = Infantry
+022F50AC = Mech
+022F525C = Recon
+022F52C8 = APC
+022F55BC = Anti-Air 
+022F51F0 = Tank
+022F5118 = Medium Tank
+022F5334 = Neotank
+022F5184 = Megatank
+022F540C = Artillery
+022F5478 = Rockets
+022F5638 = Missiles
+022F53A0 = Piperunner
+022F5694 = Fighter
+022F5700 = Bomber
+022F54E4 = Stealth
+022F5550 = Black Bomb
+022F57D8 = B Copter
+022F5844 = T Copter
+022F58B0 = Battleship
+022F5A60 = Carrier
+022F591C = Cruiser
+022F59F4 = Sub
+022F5988 = Lander
+022F576C = Black Boat
+
+
+--------------------------------------------------------------------------------
+
+Sensei's Power
+
+020E448C = MOV R1, #??
+      ?? = Unit Type
+
+020E423C = ORR R3, R3, #??
+      ?? = Unit's HP
+
+--------------------------------------------------------------------------------
+
+Wave Powers
+
+SP 0 = Damage
+SP 4 = Heal
+SP 8 = Weather (-1 = No Change | 0 = Clear | 1 = Snow | 2 = Rain | 3 = Sandstorm | #FE = Snow 2 Days)
+SP C = Fuel Cut (0 = No Cut | 1 = Cut in half)
+
+--------------------------------------------------------------------------------
+
+Urban Blight
+
+E3EB4 (arm)     = Damage
+E3EC0 (arm)     = Heal
+47058 (overlay) = Terrain Enemies recieve damage/heal
+
+--------------------------------------------------------------------------------
+
+B7C is set to load overlay 0, B80 is set to load overlay 1
+
+I changed B7C to load overlay 4 instead, and it instead loads that one! Of course the game crashes, but that's to be expected.
+
+So 020016BC is the code to load the overlay. So in theory, modify the code so there is a jump, and set it to load 3 overlays instead (one into the free ram).
+
+
+------------------------------
+
+023BFF30 = Combat Compressed Data
+02368110 = Combat Decompressed Data
+
+overlay3 = maps
+
+-----------------------------
+
+The Power range is the amount of charge over the exact amount that the co power costs that the ai will still use their co power instead of just saving for Super.
+
+Higher number means bigger allowed co power range

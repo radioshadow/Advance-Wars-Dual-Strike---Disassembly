@@ -1,0 +1,5 @@
+rikiishi/06C = Nintendo
+
+rikiishi/0CD = Touch to Start
+
+rikiishi/0D0 = Copyright

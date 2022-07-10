@@ -1,0 +1,36 @@
+020E697C: CMP R6, #7 ; Number of pointers to check.
+020E6980: B ADDLS PC, PC, R6, LSL #2 ; Gets pointer below depending on the tile unit is on.
+
+020E6984: B 020E6AD0
+020E6988: B 020E6AD0 = (Null Tile)
+020E698C: B 020E6AD0 = (Plain Tile)
+020E6990: B 020E6AD0 = (River Tile)
+020E6994: B 020E6A5C = Mountaineer (Mountain Tile)
+020E6998: B 020E6A98 = Ranger (Woods Tile)
+020E699C: B 020E69E4 = Road Rage (Road Tile)
+020E69A0: B 020E6A20 = Urban Fighter (City Tile)
+020E69A4: B 020E69A8 = Seamanship (Sea Tile)
+
+So using some free space, you can add of the rest of the tiles. So the Seamanship
+
+0x00 Null
+0x01 Plains
+0x02 River
+0x03 Mountain
+0x04 Woods
+0x05 Road
+0x06 City
+0x07 Sea
+0x08 HQ
+0x09 ???
+0x0A Airport
+0x0B Port
+0x0C Bridge
+0x0D Shoal
+0x0E Base
+0x0F Pipeline
+0x10 Pipeline Seam
+0x11 Silo Unused
+0x12 Silo Used
+0x13 Reef
+0x14 Lab

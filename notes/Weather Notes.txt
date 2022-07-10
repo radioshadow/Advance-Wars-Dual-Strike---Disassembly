@@ -1,0 +1,16 @@
+020E664C = Snow
+020E66B0 = Rain
+020E66D8 = Sand
+
+0E66D4 = 81E201EA
+
+
+020E663C = A752010A
+
+-------------------------------------------------
+
+020d2AA8
+
+020D2B4C = Sets number of days
+
+020D2D90 = Converts FE (Snow 2 Days) into 1
