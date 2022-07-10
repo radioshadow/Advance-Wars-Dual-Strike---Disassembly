@@ -1,0 +1,5 @@
+Graphic 1 (lz) = 0 
+Graphic 2 (lz) = 4E64
+       Palette = 5508
+
+
