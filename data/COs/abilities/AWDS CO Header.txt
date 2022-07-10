@@ -1,0 +1,341 @@
+AWDS - CO Header (Arm9.bin - USA)
+
+0 - 15360C = No CO
+1 - 15382C = Nell
+2 - 153A4C = Andy
+3 - 153C6C = Max
+4 - 153E8C = Olaf
+5 - 1540AC = Sami
+6 - 1542CC = Grit
+7 - 1544EC = Kanbei
+8 - 15470C = Sonja
+9 - 15492C = Eagle
+A - 154B4C = Drake
+B - 154D6C = Von Bolt
+C - 154F8C = Jugger
+D - 1551AC = Lash
+E - 1553CC = Koal 
+F - 1555EC = Hawke
+10 - 15580C = Hachi
+11 - 155A2C = Colin
+12 - 155C4C = Jess
+13 - 155E6C = Sensei
+14 - 15608C = Jake
+15 - 1562AC = Rachel
+16 - 1564CC = Sasha
+17 - 1566EC = Javier
+18 - 15690C = Grimm
+19 - 156B2C = Kindle
+1A - 156D4C = Flak
+1B - 156F6C = Adder
+
+Using Lash's data as a reference, here's what all the data does:
+
+Notes:
+(b) = byte (1 byte)
+(w) = word (2 bytes)
+(l) = long (4 bytes)
+
+In the USA version, the first pointer in the group is at: 51660
+
+Olaf's "No Snow Penalty" is not part of the header. This is hard-coded in where the game check's if it snows. To change which CO gets the "No Snow Penalty", change the CO ID at this location: DFE84
+
+Lash (arm9.bin)
+
+1551AC (w) = CO ID / ASCII Name
+1551AE (w) = Which group of pointers to load text from
+
+1551B0 (w) = CO Profile 1 (About) Text ID
+1551B2 (w) = Which group of pointers to load text from
+
+1551B4 (w) = CO Profile 2 (D2D) Text ID
+1551B6 (w) = Which group of pointers to load text from
+
+1551B8 (w) = CO Profile 3 (Power) Text ID
+1551BA (w) = Which group of pointers to load text from
+
+1551BC (w) = CO Profile 4 (Super Power) Text ID
+1551BE (w) = Which group of pointers to load text from
+
+1551C0 (w) = Theme ID
+
+1551C8 (b) = CO Power Stars
+1551CC (b) = Super CO Power Stars
+
+1551D0 (b) = Army Default Color (unused - always set to 1)
+           1 = Orange
+           2 = Blue
+           3 = Green
+           4 = Yellow
+           5 = Black
+
+1551D1 (b) = Army Style 
+           0 = OS
+           1 = BM
+           2 = GE
+           3 = YC
+           4 = BH 
+
+1551D2 (b) = Nation - Affects: Power Themes Played / Combat Mode Army Style
+           1 = OS
+           2 = BM
+           3 = GE
+           4 = YC
+           5 = BH  
+
+1551D4 (w) = Single Win Quote 1 Text ID
+1551D6 (w) = Which group of pointers to load text from
+
+1551D8 (w) = Single Win Quote 2 Text ID
+1551DA (w) = Which group of pointers to load text from
+
+1551DC (w) = Single Win Quote 3 Text ID
+1551DE (w) = Which group of pointers to load text from
+
+1551E0 (w) = Switch Quote 1 Text ID
+1551E2 (w) = Which group of pointers to load text from
+
+1551E4 (w) = Switch Quote 2 Text ID
+1551E6 (w) = Which group of pointers to load text from
+
+1551E8 (w) = Power Quote 1 Text ID
+1551EA (w) = Which group of pointers to load text from
+
+1551EC (w) = Power Quote 2 Text ID
+1551EE (w) = Which group of pointers to load text from
+
+1551F0 (w) = Power Quote 3 Text ID
+1551F2 (w) = Which group of pointers to load text from
+
+1551F4 (w) = Power Quote 4 Text ID
+1551F6 (w) = Which group of pointers to load text from
+
+1551F8 (w) = Power Quote 5 Text ID
+1551FA (w) = Which group of pointers to load text from
+
+1551FC (w) = Power Quote 6 Text ID
+1551FE (w) = Which group of pointers to load text from
+
+155204 (l) = Pointer to compressed CO Name graphic
+155208 (l) = Pointer to compressed CO Name graphic
+15520C (l) = Pointer to compressed CO Name graphic
+15520E (l) = Pointer to compressed CO Name graphic
+155210 (l) = Pointer to compressed CO Name graphic
+155214 (l) = Pointer to compressed CO Name graphic
+
+----------------------------------------------------------------------
+
+Tag
+
+155218 (w) = Tag 1 CO ID
+           0 = No CO
+           1 = Nell
+           2 = Andy
+           3 = Max
+           4 = Olaf
+           5 = Sami
+           6 = Grit
+           7 = Kanbei
+           8 = Sonja
+           9 = Eagle
+           A = Drake
+           B = Von Bolt
+           C = Jugger
+           D = Lash
+           E = Koal 
+           F = Hawke
+           10 = Hachi
+           11 = Colin
+           12 = Jess
+           13 = Sensei
+           14 = Jake
+           15 = Rachel
+           16 = Sasha
+           17 = Javier
+           18 = Grimm
+           19 = Kindle
+           1A = Flak
+           1B = Adder
+15521A (w) = Tag 1 Stars
+           0 = 0% Luck
+           1 = +5% Luck
+           2 = +10% Luck
+           3 = +15% Luck
+15521C (l) = Tag 1 Pointer to Win Quotes (arm9.bin)
+
+For example: Lash (was in play) with Hawke (02152804)
+                   152804 = Win Tag Quote 1 ID - Lash
+                   152806 = Which group of pointers to load text from
+                   152808 = Win Tag Quote 1 ID - Hawke
+                   15280A = Which group of pointers to load text from
+                   15280C = Win Tag Quote 2 ID - Lash
+                   15280E = Which group of pointers to load text from
+                   152810 = Win Tag Quote 2 ID - Hawke
+                   152812 = Which group of pointers to load text from
+                   152814 = Tag Power Name 
+		   152816 = Which group of pointers to load text from
+
+155220 (w) = Tag 2 CO ID
+155222 (w) = Tag 2 Stars
+155224 (l) = Tag 2 Pointer to Win Quotes (arm9.bin)
+
+155228 (w) = Tag 3 CO ID
+15522A (w) = Tag 3 Stars
+15522C (l) = Tag 3 Pointer to Win Quotes (arm9.bin)
+
+155230 (b) = Tag Firepower with No CO (between -100 to +130)
+155231 (b) = Tag Firepower with Nell
+155232 (b) = Tag Firepower with Andy
+155233 (b) = Tag Firepower with Max
+155234 (b) = Tag Firepower with Olaf
+155235 (b) = Tag Firepower with Sami
+155236 (b) = Tag Firepower with Grit
+155237 (b) = Tag Firepower with Kanbei
+155238 (b) = Tag Firepower with Sonja
+155239 (b) = Tag Firepower with Eagle
+15523A (b) = Tag Firepower with Drake
+15523B (b) = Tag Firepower with Von Volt
+15523C (b) = Tag Firepower with Jugger
+15523D (b) = Tag Firepower with Lash
+15523E (b) = Tag Firepower with Koal
+15523F (b) = Tag Firepower with Hawke
+155240 (b) = Tag Firepower with Hachi
+155241 (b) = Tag Firepower with Colin
+155242 (b) = Tag Firepower with Jess
+155243 (b) = Tag Firepower with Sensei
+155244 (b) = Tag Firepower with Jake
+155245 (b) = Tag Firepower with Rachel
+155246 (b) = Tag Firepower with Sasha
+155247 (b) = Tag Firepower with Javier
+155248 (b) = Tag Firepower with Grimm
+155249 (b) = Tag Firepower with Kindle
+15524A (b) = Tag Firepower with Flak
+15524B (b) = Tag Firepower with Adder
+
+----------------------------------------------------------------------
+
+Day to Day (note some only work when powers are activated)
+
+15524C (w) = Power Name ID - Lash
+15524E (w) = Which group of pointers to load text from
+
+155250 (l) = CO Power ASM Pointer
+           020E2658 = None
+           020E2638 = Blizzard
+           020E1CEC = White Flash (Reveal)
+           020E1C8C = Gold Rush
+           020E1C6C = White Flash (Gold Sound)
+           020E1D0C = White Flash (Gold Sound)
+           020E1D2C = Market Crash? (Gold Sound)
+           020E4184 = Winter Fury
+           020E4108 = Tsunami
+           020E408C = Typhoon
+           020E4014 = Black Wave
+           020E3F9C = Black Storm
+           020E3EB0 = Urban Blight
+           020E4F38 = Ex Machina
+           020E4614 = Missile Salvo
+           020E4478 = Infantry Drop
+	   020E444C = Mech Drop
+
+155254 (b) = Special Skills 1
+            1 = Hidden HP
+            2 = City Deployment
+            4 = 1st Counters
+            8 = Piercing Vision
+           10 = Double Terrain Stars
+           20 = +20% Firepower in Snow
+           40 = Air Fuel Saver
+
+155255 (b) = Special Skills 2
+            4 = 50% Platinum Attack
+            8 = +20% Indirect Defense
+           10 = +40% Indirect Defense
+           20 = +80% Indirect Defense
+           40 = +100G Per city
+           80 = Terrain into firepower
+
+155264 (w) = Vision Bonus
+155266 (w) = Repair Increase
+155268 (w) = Positive Luck 
+15526A (w) = Negative Luck
+15526C (w) = Counterattacks
+15526E (w) = Unit Cost
+155270 (w) = Daily Capture Rate
+155272 (w) = Offense from Towers 
+155274 (w) = Defense from Towers
+155276 (w) = Terrain Star Reduction
+
+155278 (l) = Firepower on Terrain Pointer
+           02350320 = None
+
+15527C (b) = Unit Highlight Effect
+           1 = Circle Around
+           2 = Lines
+           3 = Dots
+           4 = Bubbles
+           5 = Circle Zoom Out
+           6 = Spinning Circles
+           7 = Wave
+           8 = Flame (Used on SCOP)
+
+15527D (b) = Unit Highlight Color (only Effects 1 - 4)
+           1 = Orange / Default
+           2 = Purple
+           3 = Blue
+           4 = Green
+           8 = Flame (Used on SCOP)
+
+155280 (l) = Which Units are Affected/Highlighted
+           00000000 = None
+           020E2610 = All but Oozium Class Units
+           020E25E8 = All but Oozium Class Units
+           020E25A8 = Direct Combat Units
+           020E2530 = Foot Soldiers
+           020E2568 = Ranged Combat Units
+           020E24AC = Non-Foot Soldiers
+
+155284 (l) = Unit Bonus
+	   00000000 = None (Olaf and Sonja)
+           020E244C = None
+           020E2450 = Resupply
+           020E2498 = Repair 2HP
+           020E2484 = Repair 5HP
+           020E2474 = Non-Infanty Move Again
+
+155288 (l) = Calculation Bonus
+           020E23D8 = No Effect
+           020E2364 = Power of Money Multiplier
+           020E2264 = High Society Urban Multiplier
+
+15528C (w) = Sound Effect 1 ID during Power
+15528E (w) = Sound Effect 2 ID during Power
+
+155290 (l) = Movement Cost (Default)
+155294 (l) = Movement Cost (Skill Used = Prairie Dog)
+155298 (l) = Movement Cost (Skill Used = Pathfinder)
+15529C (l) = Movement Cost (Skills Used = Prairie Dog & Pathfinder)
+
+1552A0 (l) = Soldiers - Stats Pointer (Firepower | Defense | Movement | Range)
+1552A4 (l) = Direct - Vehicles Stats Pointer
+1552A8 (l) = Indirect - Vehicles Stats Pointer
+1552AC (l) = Planes - Stats Pointer
+1552B0 (l) = Copters - Stats Pointer
+1552B4 (l) = Navy Stats - Pointer
+1552B8 (l) = All Units - Stats Pointer (is not used)
+1552BC (l) = Direct - Combat Stats Pointer
+1552C0 (l) = Indirect - Combat Stats Pointer
+1552C4 (l) = Transports - Stats Pointer
+1552C8 (l) = Black Bombs - Stats Pointer
+
+----------------------------------------------------------------------
+
+Power - Add hex 80 to required Day to Day pointer.
+
+              For example: Lash's COP Firepower on Terrain: 155278 + 80 = 1552FC
+
+----------------------------------------------------------------------
+
+Super Power - Add hex 100 to required Day to Day pointer.
+
+              For example: Lash's SCOP Firepower on Terrain: 155278 + 100 = 155378

@@ -1,0 +1,20 @@
+The ASCII font in AWDS is setup the same was as in AW2.
+
+---------------------------------------------------------------------
+
+AWDS ASCII Font (overlay 0)
+
+49178 - 49277 = Font Width
+
+49278 - 49677 = Pointers to each letter (uncompressed)
+
+1E3A0 - 214B0 = Font Graphics are stored.
+
+---------------------------------------------------------------------
+
+4937C = Pointer to A
+
+1F070 = A
+1F0A0 = B
+
+---------------------------------------------------------------------
